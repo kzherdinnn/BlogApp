@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral() // Gantikan jcenter dengan mavenCentral
+    }
+    dependencies {
+        // Gunakan versi AGP terbaru yang kompatibel dengan Gradle terbaru
+        classpath 'com.android.tools.build:gradle:8.7.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // Pastikan menggunakan mavenCentral
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
